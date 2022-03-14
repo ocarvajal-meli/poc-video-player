@@ -3,7 +3,8 @@ import './App.css';
 import VideoPlayer from './VideoPlayer';
 
 function App() {
-  const videpPlayerOptions = {
+
+  const videoPlayerOptions = {
     autoplay: true,
     playbackRates: [0.5, 1, 1.25, 1.5, 2],
     width: 720,
@@ -11,15 +12,13 @@ function App() {
     controls: true,
     sources: [
       {
-        src: '//vjs.zencdn.net/v/oceans.mp4',
-        type: 'video/mp4',
+        src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
+        type: 'application/x-mpegURL'
       },
     ],
   };
   
-  return (
-    <VideoPlayer {...videpPlayerOptions} />
-  );
+  return <VideoPlayer {...videoPlayerOptions} />;
 }
 
 export default App;
