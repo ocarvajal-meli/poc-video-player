@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import { StreamType } from './components/VideoPlayer/VideoPlayer.interface';
 
 function App() {
 
@@ -9,16 +9,21 @@ function App() {
     playbackRates: [0.5, 1, 1.25, 1.5, 2],
     width: 720,
     height: 300,
-    controls: true,
-    sources: [
-      {
-        src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
-        type: 'application/x-mpegURL'
-      },
-    ],
+    controls: false,
+    streamType: StreamType.VOD,
+    vod: {
+      contentSourceId: '2528370',
+      videoId: 'tears-of-steel',
+      backupStream: 'https://storage.googleapis.com/interactive-media-ads/media/bbb.m3u8'
+    }
   };
   
-  return <VideoPlayer {...videoPlayerOptions} />;
+  return (
+    <>
+      <h1>Google DAI with VideoJS</h1>
+      <VideoPlayer {...videoPlayerOptions} />
+    </>
+  );
 }
 
 export default App;
