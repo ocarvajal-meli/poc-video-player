@@ -14,9 +14,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "sass": "^1.49.9",
-    "typescript": "^4.6.2",
-    "video.js": "^7.18.1",
-    "web-vitals": "^2.1.4"
+    "shaka-player-react": "^1.1.2",
+    "typescript": "^4.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,6 +42,6 @@
     ]
   },
   "devDependencies": {
-    "@types/video.js": "^7.3.31"
+    "shaka-player-ui-controls": "^1.0.8"
   }
 }

@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer2 from './VideoPlayer2';
 
 function App() {
 
   const videoPlayerOptions = {
     autoplay: true,
-    playbackRates: [0.5, 1, 1.25, 1.5, 2],
-    width: 720,
+    width: 300,
     height: 300,
-    controls: true,
+    controls: false,
     sources: [
       {
         src: 'https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8',
@@ -17,8 +16,8 @@ function App() {
       },
     ],
   };
-  
-  return <VideoPlayer {...videoPlayerOptions} />;
+
+  return <VideoPlayer2 {...videoPlayerOptions} />;
 }
 
 export default App;
